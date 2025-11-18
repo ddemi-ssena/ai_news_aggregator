@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ai-news-aggregator
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.14.2
+Requires-Dist: docling>=2.61.2
+Requires-Dist: feedparser>=6.0.12
+Requires-Dist: markdown>=3.7.0
+Requires-Dist: markdownify>=0.11.6
+Requires-Dist: openai>=2.7.2
+Requires-Dist: psycopg2-binary>=2.9.11
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.2.1
+Requires-Dist: requests>=2.32.5
+Requires-Dist: sqlalchemy>=2.0.44
+Requires-Dist: youtube-transcript-api>=1.2.3

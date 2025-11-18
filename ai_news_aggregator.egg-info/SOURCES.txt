@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+ai_news_aggregator.egg-info/PKG-INFO
+ai_news_aggregator.egg-info/SOURCES.txt
+ai_news_aggregator.egg-info/dependency_links.txt
+ai_news_aggregator.egg-info/requires.txt
+ai_news_aggregator.egg-info/top_level.txt
+app/__init__.py
+app/scrapers/youtube.py
+app/services/__init__.py
+app/services/process_youtube.py
