@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta, timezone
 from typing import List, Optional
-import feedparser
-from docling.document_converter import DocumentConverter
-from pydantic import BaseModel
+import feedparser #RSS feedini okumak için kullanılan paker
+from docling.document_converter import DocumentConverter #belge dönüştüme için
+from pydantic import BaseModel #Pydantic veri modeli
 
 
 class OpenAIArticle(BaseModel):
@@ -13,7 +13,7 @@ class OpenAIArticle(BaseModel):
     published_at: datetime
     category: Optional[str] = None
     
-
+#pydantic sayesinde veri doğrulanır, veri tipi garanti edilir, api ve database için hazır hala getirilir
 class OpenAIScraper:
     def __init__(self):
         self.rss_url = "https://openai.com/news/rss.xml"
