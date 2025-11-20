@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
-
+#veritabanında oluşturulacak tabloları tanımlar
 class YouTubeVideo(Base):
     __tablename__ = "youtube_videos"
     
@@ -45,7 +45,7 @@ class AnthropicArticle(Base):
 
 
 class Digest(Base):
-    __tablename__ = "digests"
+    __tablename__ = "digests" #özetlenmiş içerikler
     
     id = Column(String, primary_key=True)
     article_type = Column(String, nullable=False)

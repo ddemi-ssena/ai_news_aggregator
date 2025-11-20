@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:17
-    container_name: ai-news-aggregator-db
+    container_name: ai_news_aggregator-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123456

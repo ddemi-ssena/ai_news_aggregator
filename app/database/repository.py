@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from .models import YouTubeVideo, OpenAIArticle, AnthropicArticle, Digest
 from .connection import get_session
 
-
+#repository db de CRUD işlemleri yapmak için kullanılan sınıftır. (db de çalışan sekreter)
 class Repository:
     def __init__(self, session: Optional[Session] = None):
         self.session = session or get_session()
@@ -25,7 +25,7 @@ class Repository:
         )
         self.session.add(video)
         self.session.commit()
-        return video
+        return video  #YouTube videosunu veritabanına ekler.
     
     def create_openai_article(self, guid: str, title: str, url: str, published_at: datetime,
                               description: str = "", category: Optional[str] = None) -> Optional[OpenAIArticle]:
@@ -142,7 +142,7 @@ class Repository:
             video.transcript = transcript
             self.session.commit()
             return True
-        return False
+        return False   #Bir videonun transcriptini günceller.
     
     def get_articles_without_digest(self, limit: Optional[int] = None) -> List[Dict[str, Any]]:
         articles = []
@@ -166,7 +166,7 @@ class Repository:
                     "url": video.url,
                     "content": video.transcript or video.description or "",
                     "published_at": video.published_at
-                })
+                })  #Henüz özetlenmemiş makaleleri döner.
         
         openai_articles = self.session.query(OpenAIArticle).all()
         for article in openai_articles:
