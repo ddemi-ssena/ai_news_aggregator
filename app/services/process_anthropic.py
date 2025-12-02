@@ -5,16 +5,18 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+# scraperdan çekilen makaleler sadece url+başlık formatındayken  bu dosya içeriğin tamamını indiriyor. markdown formatında kaydediyor.
 
 from app.scrapers.anthropic import AnthropicScraper
 from app.database.repository import Repository
 
 
 def process_anthropic_markdown(limit: Optional[int] = None) -> dict:
-    scraper = AnthropicScraper()
-    repo = Repository()
+    scraper = AnthropicScraper() #web tarayıcı botu
+    repo = Repository() #db yardımcısı
     
     articles = repo.get_anthropic_articles_without_markdown(limit=limit)
+    #markdown olmayan makaleleri bulur ve scraper da URLden alıp dolduracak
     processed = 0
     failed = 0
     

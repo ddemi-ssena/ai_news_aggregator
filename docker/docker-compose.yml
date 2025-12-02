@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: 123456
       POSTGRES_DB: ai_news_aggregator
     ports:
-      - 5432
+      - "5433:5432"     # <<< BURAYI DEĞİŞTİRDİK
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -18,3 +18,4 @@ services:
 
 volumes:
   postgres_data:
+
