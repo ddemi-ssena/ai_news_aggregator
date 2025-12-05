@@ -17,29 +17,6 @@ CuratorAgent → Kullanıcının ilgi alanlarına göre haberleri puanlayıp sı
 
 Runner & Daily Runner → Tüm sistemi tek komutla otomatik olarak çalıştırır.
 
-📂 Proje Yapısı
-ai_new_aggregator/
-│
-├── app/
-│   ├── agents/
-│   │   ├── digest_agent.py
-│   │   └── curator_agent.py
-│   │
-│   ├── services/
-│   │   ├── fetch_openai_news.py
-│   │   ├── fetch_anthropic_news.py
-│   │   ├── fetch_youtube_videos.py
-│   │   └── process_youtube_transcripts.py
-│   │
-│   ├── runner.py
-│   ├── daily_runner.py
-│   ├── config.py
-│   └── profiles.py
-│
-├── data/
-│   └── database.db
-│
-└── README.md
 
 🧠 Kullanılan Yapay Zekâ Bileşenleri
 1️⃣ DigestAgent — İçerik Özetleme
@@ -166,17 +143,6 @@ Transcript işleme
 
 Daily automation
 
-🔮 İleri Geliştirmeler
-
-İstersen şu özellikleri ekleyebiliriz:
-
-🔔 Telegram / Discord bildirim botu
-
-📱 Mobil uygulama için API (FastAPI)
-
-⭐ Favori haberler sistemi
-
-📊 Dashboard (Streamlit)
 
 📬 Yardım
 
